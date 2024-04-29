@@ -117,14 +117,52 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+# import os
 STATIC_URL = '/static/'
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# STATICFILES_DIRS = (
+
+#    ('assets', os.path.join(BASE_DIR, '../static')),
+# )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SIMPLEUI_LOGIN_PARTICLES = False
+SIMPLEUI_CONFIG = {
+    'system_keep': False,
+    'menu_display': ['Simpleui', 'Authentication', '动态菜单测试'],      # 开启排序和过滤功能, 不填此字段为默认排序和全部显示, 空列表[] 为全部不显示.
+    'dynamic': True,    # 设置是否开启动态菜单, 默认为False. 如果开启, 则会在每次用户登陆时动态展示菜单内容
+    'menus': [{
+        'name': 'Simpleui',
+        'icon': 'fas fa-code',
+        'url': 'https://gitee.com/tompeppa/simpleui',
+        # 浏览器新标签中打开
+        'newTab': True,
+    }, {
+        'name': '动态菜单测试' ,
+        'icon': 'fa fa-desktop',
+        'models': [{
+            'name': 'He',
+            'url': 'http://baidu.com',
+            'icon': 'far fa-surprise'
+        }]
+    }]
+}
 
-SIMPLEUI_LOGO = '/static/admin.png/'
+SIMPLEUI_HOME_INFO = True
+
+SIMPLEUI_HOME_QUICK = True
+
+SIMPLEUI_HOME_ACTION = True
+
+SIMPLEUI_LOGO = 'https://raw.githubusercontent.com/wangweiao/django/master/ui/static/admin.png'
+
+SIMPLEUI_HOME_INFO = False
+
+# SIMPLEUI_HOME_PAGE = 'https://www.elte.hu/'
+
+SIMPLEUI_HOME_TITLE = 'Home'
