@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myapp.apps.MyappConfig'
 ]
 
 MIDDLEWARE = [
@@ -147,7 +148,7 @@ SIMPLEUI_CONFIG = {
         'icon': 'fa fa-desktop',
         'models': [{
             'name': 'He',
-            'url': 'http://baidu.com',
+            'url': '/index',
             'icon': 'far fa-surprise'
         }]
     }]
