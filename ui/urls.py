@@ -24,6 +24,8 @@ admin.site.index_title = "Console"
 
 urlpatterns = [
 
+    path('homepage/', views.homepage),
+
     path('index/', views.index),
 
     path('', admin.site.urls),

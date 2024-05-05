@@ -135,13 +135,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SIMPLEUI_CONFIG = {
     'system_keep': False,
-    'menu_display': ['Google', 'Authentication', 'Stock'],
+    'menu_display': ['Data', 'Stock', 'Authentication'],
     'dynamic': True,
     'menus': [{
-        'name': 'Google',
+        'name': 'Data',
         'icon': 'fas fa-code',
-        'url': 'https://google.com/',
-        'newTab': True,
+        'url': 'https://tushare.pro/webclient/',
+        'newTab': False,
     }, {
         'name': 'Stock',
         'icon': 'fa fa-desktop',
@@ -149,6 +149,15 @@ SIMPLEUI_CONFIG = {
             'name': 'CNPC',
             'url': '/index',
             'icon': 'fa-solid fa-gas-pump'
+        }]
+    }, {
+        'app': 'auth',
+        'name': 'Authentication',
+        'icon': 'fas fa-user-shield',
+        'models': [{
+            'name': 'User',
+            'icon': 'fa fa-user',
+            'url': 'auth/user/'
         }]
     }]
 }
