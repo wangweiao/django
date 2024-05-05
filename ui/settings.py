@@ -138,19 +138,6 @@ SIMPLEUI_CONFIG = {
     'menu_display': ['Data', 'Stock', 'Authentication'],
     'dynamic': True,
     'menus': [{
-        'name': 'Data',
-        'icon': 'fas fa-code',
-        'url': 'https://tushare.pro/webclient/',
-        'newTab': False,
-    }, {
-        'name': 'Stock',
-        'icon': 'fa fa-desktop',
-        'models': [{
-            'name': 'CNPC',
-            'url': '/index',
-            'icon': 'fa-solid fa-gas-pump'
-        }]
-    }, {
         'app': 'auth',
         'name': 'Authentication',
         'icon': 'fas fa-user-shield',
